@@ -24,8 +24,9 @@ https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip
 https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip
 ```
 📂 Краткая инструкция:
-Откройте Karing → Settings → Backup and Sync.
 
-Нажмите Import and Export → Import from URL.
+1. Откройте Karing → Settings → Backup and Sync (Karing → Настройки → Резервное копирование и синхранизация).
 
-Вставьте скопированную ссылку и нажмите OK.
+2. Нажмите Import and Export → Import from URL (Импорт и экспорт в файл → Импорт из URL).
+
+3. Вставьте скопированную ссылку и нажмите OK.
