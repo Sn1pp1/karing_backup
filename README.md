@@ -9,24 +9,8 @@
 ---
 
 ### 📋 Ссылки для импорта
-*Нажмите на иконку копирования справа в углу блока со ссылкой:*
+*Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
 
 **📱 Mobile:**
 ```text
 https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip
-📺 TV:
-
-Plaintext
-https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip
-💻 Windows:
-
-Plaintext
-https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip
-📂 Краткая инструкция:
-Откройте Karing → Settings → Backup and Sync.
-
-Нажмите Import and Export → Import from URL.
-
-Вставьте скопированную ссылку и нажмите OK.
-
-Если возникли вопросы, сверяйтесь с инструкцией в Google Docs выше.
