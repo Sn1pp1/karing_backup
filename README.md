@@ -13,14 +13,16 @@
 
 **📱 Mobile:**
 ```text
-[https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip](https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip)
-
+https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip
+```
 📺 TV:
-[https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip](https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip)
-
+```text
+https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip
+```
 💻 Windows:
-[https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip](https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip)
-
+```text
+https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip
+```
 📂 Краткая инструкция:
 Откройте Karing → Settings → Backup and Sync.
 
