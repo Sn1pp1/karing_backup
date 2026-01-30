@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karing — настройка</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: #020617;
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,.45);
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  color: #cbd5f5;
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.steps {
+  display: none;
+  margin-top: 20px;
+  background: #020617;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.ok {
+  margin-top: 14px;
+  color: #22c55e;
+  font-size: 15px;
+  display: none;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1 id="title"></h1>
+  <p id="desc"></p>
+
+  <button onclick="copyLink()" id="btn"></button>
+
+  <div class="ok" id="ok">✅ Готово! Ссылка скопирована</div>
+
+  <div class="steps" id="steps">
+    <b>Дальше в Karing:</b><br>
+    📂 Меню → Backup and Sync<br>
+    ⬇️ Import and Export<br>
+    🔗 Import from URL<br>
+    📋 Вставьте ссылку → OK
+  </div>
+</div>
+
+<script>
+const LINKS = {
+  mobile: "https://github.com/Sn1pp1/karing_backup/releases/download/v0.0.1/Karing_mobile.zip",
+  tv: "https://github.com/Sn1pp1/karing_backup/releases/download/v0.0.1/Karing_TV.zip",
+  desktop: "https://github.com/Sn1pp1/karing_backup/releases/download/v0.0.1/Karing_windows.zip"
+};
+
+const RU = {
+  title: "🚀 Настройка Karing",
+  desc: "Нажмите кнопку — ссылка скопируется",
+  btn: "Скопировать ссылку"
+};
+
+const EN = {
+  title: "🚀 Karing Setup",
+  desc: "Tap the button — link will be copied",
+  btn: "Copy link"
+};
+
+const T = navigator.language.startsWith("ru") ? RU : EN;
+
+document.getElementById("title").innerText = T.title;
+document.getElementById("desc").innerText = T.desc;
+document.getElementById("btn").innerText = T.btn;
+
+function detectDevice() {
+  const ua = navigator.userAgent.toLowerCase();
+  if (ua.includes("android") && ua.includes("tv")) return "tv";
+  if (ua.includes("android") || ua.includes("iphone") || ua.includes("ipad")) return "mobile";
+  return "desktop";
+}
+
+function copyLink() {
+  const link = LINKS[detectDevice()];
+  navigator.clipboard.writeText(link).then(() => {
+    document.getElementById("ok").style.display = "block";
+    document.getElementById("steps").style.display = "block";
+  });
+}
+</script>
+</body>
+</html>
