@@ -20,10 +20,6 @@
 ```text
 https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip
 ```
-**📺 TV:**
-```text
-https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_TV.zip
-```
 **💻 Windows:**
 ```text
 https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip
