@@ -18,11 +18,11 @@
 
 **📱 Mobile:**
 ```text
-https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_mobile.zip
+https://github.com/Sn1pp1/karing_backup/releases/download/v0.0.1/Karing_mobile.zip
 ```
 **💻 Windows:**
 ```text
-https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/Karing_windows.zip
+https://github.com/Sn1pp1/karing_backup/releases/download/v0.0.1/Karing_windows.zip
 ```
 📂 Краткая инструкция:
 
