@@ -9,7 +9,7 @@
 
 ---
 
-### 📚 Подробная инструкция
+### 📚 Пошаговое руководство для первой настройки приложения.
 [![📖 Инструкция](https://img.shields.io/badge/📖_Инструкция-Netlify-00ADD8?style=for-the-badge&logo=netlify)](https://karing-backup.netlify.app/) [![📖 Инструкция](https://img.shields.io/badge/📖_Инструкция-Telegra.ph-blue?style=for-the-badge)](https://telegra.ph/Instrukciya-po-nastrojke-prilozheniya-Karing-03-07)
 
 ---
