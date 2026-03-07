@@ -31,3 +31,5 @@ https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_windows.
 2. Нажмите Import and Export → Import from URL (Импорт и экспорт в файл → Импорт из URL).
 
 3. Вставьте скопированную ссылку и нажмите OK.
+
+![karing](https://github.com/user-attachments/assets/0ff7e21e-1b29-49ee-82c3-d61ce2b53f7a)
