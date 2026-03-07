@@ -7,10 +7,6 @@
 
 Быстрая настройка конфигурации для разных устройств. 
 
-> [!TIP]
-> **Нужна помощь со скриншотами?**
-> Читайте [Подробную инструкцию в Google Docs](https://docs.google.com/document/d/1el7PHDrcuiUuotty4Jitg0vWCkUWQjIVKL2kKO1mKx8/edit?tab=t.0) — там есть описание каждого шага и пояснения к настройкам.
-
 ---
 
 ### 📋 Ссылки для импорта
@@ -32,4 +28,6 @@ https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_windows.
 
 3. Вставьте скопированную ссылку и нажмите OK.
 
-![karing](https://github.com/user-attachments/assets/0ff7e21e-1b29-49ee-82c3-d61ce2b53f7a)
+<div align="center">
+  <img src="karing.gif" alt="Демонстрация" width="350" />
+</div>
