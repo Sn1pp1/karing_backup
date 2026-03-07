@@ -9,6 +9,10 @@
 
 ---
 
+### 📚 Подробная инструкция
+[![📖 Инструкция](https://img.shields.io/badge/📖_Инструкция-Telegra.ph-blue?style=for-the-badge)](https://telegra.ph/Instrukciya-po-nastrojke-prilozheniya-Karing-03-07)
+
+---
 ### 📋 Ссылки для импорта
 *Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
 
