@@ -33,5 +33,5 @@ https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_windows.
 3. Вставьте скопированную ссылку и нажмите OK.
 
 <div align="center">
-  <img src="karing.gif" alt="Демонстрация" width="350" />
+  <img src="karing2.gif" alt="Демонстрация" width="350" />
 </div>
