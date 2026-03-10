@@ -20,7 +20,7 @@
 ```text
 https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.zip
 ```
-**💻 Windows:**
+**💻 Desktop (Windows):**
 ```text
 https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_windows.zip
 ```
