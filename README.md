@@ -22,7 +22,7 @@ https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.z
 ```
 **💻 Desktop (Windows):**
 ```text
-https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_windows.zip
+https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_desktop.zip
 ```
 📂 Краткая инструкция:
 
