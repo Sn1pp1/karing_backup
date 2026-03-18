@@ -1,8 +1,7 @@
 ## 📥 Скачать Karing
 
 <details>
-<summary style="background: linear-gradient(90deg, transparent 0%, #1f2937 50%, transparent 100%); border-top: 2px solid #58a6ff; border-bottom: 2px solid #58a6ff; color: #58a6ff; padding: 14px; cursor: pointer; font-weight: 600; text-align: center;">
-✦ ✦ &nbsp; <b>📥 СКАЧАТЬ KARING</b> &nbsp; ✦ ✦ <br><span style="font-size: 0.85em; font-weight: 400;">Нажмите, чтобы показать все платформы для скачивания 🔽</span>
+<summary style="background: linear-gradient(90deg, transparent 0%, #1f2937 50%, transparent 100%); border-top: 2px solid #58a6ff; border-bottom: 2px solid #58a6ff; color: #58a6ff; padding: 14px; cursor: pointer; font-weight: 600; text-align: center;">&nbsp;<b>🔽 Показать все платформы для скачивания 🔽</b> &nbsp;<br><span style="font-size: 0.85em; font-weight: 400;"></span>
 </summary>
 
 <div style="padding: 20px; background: #161b22; border: 2px solid #667eea; border-top: none; border-radius: 0 0 8px 8px;">
