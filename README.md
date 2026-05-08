@@ -43,7 +43,7 @@
 ---
 
 ### 📚 Пошаговое руководство для первой настройки приложения.
-[![📖 Инструкция](https://img.shields.io/badge/📖_Инструкция-Netlify-00ADD8?style=for-the-badge&logo=netlify)](https://karing.netlify.app/) [![ИНСТРУКЦИЯ](https://img.shields.io/badge/ИНСТРУКЦИЯ-на%20beget-00D676?style=for-the-badge)](http://c92290x1.beget.tech/)
+[![ИНСТРУКЦИЯ](https://img.shields.io/badge/ИНСТРУКЦИЯ-007ACC?style=for-the-badge&logo=github)](https://sn1pp1.github.io/karing_backup/)
 ---
 ### 📋 Ссылки для импорта
 *Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
