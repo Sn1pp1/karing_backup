@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Инструкция по настройке Karing</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #c9d1d9;
+            background: #0d1117;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .download-toggle-header {
+            background: linear-gradient(135deg, #161b22 0%, #1f2937 100%);
+            border: 2px solid #58a6ff;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin: 0 0 30px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(88,166,255,0.15);
+            user-select: none;
+        }
+        .download-toggle-header:hover {
+            box-shadow: 0 6px 20px rgba(88,166,255,0.25);
+            transform: translateY(-1px);
+        }
+        .download-toggle-header h3 {
+            color: #58a6ff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .toggle-icon {
+            font-size: 24px;
+            color: #58a6ff;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+        .download-toggle-header.expanded .toggle-icon {
+            transform: rotate(180deg);
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, #161b22 0%, #1f2937 100%);
+            border: 2px solid #58a6ff;
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            padding: 0 25px;
+            margin: -30px 0 30px 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        .download-section.expanded {
+            padding: 30px 25px;
+            max-height: 2000px;
+            opacity: 1;
+        }
+        .download-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .dl-btn {
+            padding: 16px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 220px;
+            justify-content: center;
+            transition: all 0.2s ease;
+            color: #fff;
+        }
+        .dl-btn:hover { transform: translateY(-3px); opacity: 0.95; }
+        .dl-btn .icon { font-size: 22px; }
+        
+        .dl-btn.windows { background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%); }
+        .dl-btn.macos { background: linear-gradient(135deg, #343a40 0%, #212529 100%); }
+        .dl-btn.android { background: linear-gradient(135deg, #3DDC84 0%, #28a745 100%); color: #0d1117; }
+        .dl-btn.android-tv { background: linear-gradient(135deg, #FFA500 0%, #cc8400 100%); color: #0d1117; }
+        .dl-btn.ios { background: linear-gradient(135deg, #007aff 0%, #0056b3 100%); }
+        .dl-btn.linux-deb { background: linear-gradient(135deg, #E95420 0%, #c7441a 100%); min-width: 260px; }
+        .dl-btn.linux-rpm { background: linear-gradient(135deg, #3b5998 0%, #2d4373 100%); min-width: 260px; }
+        .dl-btn.github { background: linear-gradient(135deg, #238636 0%, #2ea043 100%); }
+        .dl-btn.site { background: linear-gradient(135deg, #6e7681 0%, #484f58 100%); }
+        
+        .download-footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #30363d;
+        }
+        .download-footer p {
+            color: #8b949e;
+            font-size: 13px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .download-footer .btn-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #30363d;
+            margin-bottom: 30px;
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; color: #fff; }
+        .subtitle { color: #8b949e; }
+        
+        .step {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .step-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #58a6ff;
+        }
+        .step p { margin: 8px 0; }
+        .step strong { color: #fff; }
+        .action {
+            background: #1f242c;
+            border-left: 4px solid #58a6ff;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+            font-weight: 500;
+            color: #c9d1d9;
+        }
+        
+        .links-section {
+            background: #28240a;
+            border: 2px solid #9a6700;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .links-section h3 { margin-bottom: 15px; color: #f0e6a3; }
+        .links-section p { color: #c9d1d9; }
+        
+        .copy-block {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .copy-block code {
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 0.9rem;
+            color: #e6edf3;
+            word-break: break-all;
+            flex: 1;
+        }
+        .copy-btn {
+            padding: 8px 14px;
+            background: #238636;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #2ea043; }
+        .copy-btn.copied { background: #6e7681; }
+        
+        .gif-section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .gif-section h3 { color: #58a6ff; margin-bottom: 10px; }
+        .gif-container {
+            background: #0d1117;
+            border-radius: 6px;
+            padding: 10px;
+            display: inline-block;
+            max-width: 100%;
+        }
+        .demo-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+        
+        .activation {
+            background: #151c26;
+            border-left: 4px solid #58a6ff;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+        .activation h3 { color: #58a6ff; margin-bottom: 10px; }
+        .activation ol { margin-left: 20px; margin-top: 10px; color: #c9d1d9; }
+        .activation li { margin: 8px 0; }
+        .activation strong { color: #fff; }
+        
+        .success {
+            text-align: center;
+            padding: 30px;
+            background: #12211b;
+            border: 1px solid #2da44e;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-weight: 600;
+            color: #56d364;
+        }
+        
+        @media (max-width: 600px) {
+            .copy-block { flex-direction: column; align-items: stretch; }
+            .copy-btn { width: 100%; }
+            .download-row { flex-direction: column; align-items: center; }
+            .dl-btn { width: 100%; max-width: 340px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="download-toggle-header" onclick="toggleDownloadSection()">
+    <h3>📥 Скачать Karing</h3>
+    <span class="toggle-icon">▼</span>
+</div>
+
+<div class="download-section" id="downloadSection">
+    <div class="download-row">
+        <a href="https://dot.karing.app/client.html?tag=windows-installer-stable" target="_blank" class="dl-btn windows">
+            <span class="icon">🪟</span> Windows (Installer)
+        </a>
+        <a href="https://dot.karing.app/client.html?tag=macos-stable" target="_blank" class="dl-btn macos">
+            <span class="icon">🍎</span> macOS
+        </a>
+        <a href="https://dot.karing.app/client.html?tag=android-stable" target="_blank" class="dl-btn android">
+            <span class="icon">🤖</span> Android (Phone/Tablet)
+        </a>
+        <a href="https://dot.karing.app/client.html?tag=android-armv7a-stable" target="_blank" class="dl-btn android-tv">
+            <span class="icon">📺</span> Android TV / Box
+        </a>
+        <a href="https://apps.apple.com/ru/app/karing/id6472431552" target="_blank" class="dl-btn ios">
+            <span class="icon">📱</span> iOS (App Store)
+        </a>
+    </div>
+    
+    <div class="download-row">
+        <a href="https://dot.karing.app/client.html?tag=linux-deb-stable" target="_blank" class="dl-btn linux-deb">
+            <span class="icon">🐧</span> Debian / Ubuntu (.deb)
+        </a>
+        <a href="https://dot.karing.app/client.html?tag=linux-rpm-stable" target="_blank" class="dl-btn linux-rpm">
+            <span class="icon">🐧</span> Fedora / RHEL (.rpm)
+        </a>
+    </div>
+        
+    <div class="download-footer">
+        <p>Другие варианты:</p>
+        <div class="btn-row">
+            <a href="https://github.com/KaringX/karing/releases/latest" target="_blank" class="dl-btn github">
+                <span class="icon">🐙</span> GitHub (Все версии)
+            </a>
+            <a href="https://karing.app/en/download" target="_blank" class="dl-btn site">
+                <span class="icon">🌐</span> Официальный сайт
+            </a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <h1>🚀 Инструкция по настройке Karing</h1>
+    <p class="subtitle">Пошаговое руководство для первой настройки приложения</p>
+</header>
+
+<div class="links-section">
+    <h3>📥 Ссылки для импорта</h3>
+    <p>Скопируйте ссылку, подходящую для вашего устройства:</p>
+    
+    <p style="margin-top:15px;font-weight:500">📱 Mobile & TV:</p>
+    <div class="copy-block">
+        <code id="mobile-link">https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.zip</code>
+        <button class="copy-btn" data-copy="mobile-link">📋 Copy</button>
+    </div>
+    
+    <p style="margin-top:15px;font-weight:500">💻 Desktop (Windows):</p>
+    <div class="copy-block">
+        <code id="desktop-link">https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_desktop.zip</code>
+        <button class="copy-btn" data-copy="desktop-link">📋 Copy</button>
+    </div>
+</div>
+
+<div class="gif-section">
+    <h3>🎬 Как это выглядит</h3>
+    <p style="margin-bottom:15px;color:#8b949e">Краткая демонстрация процесса импорта:</p>
+    <div class="gif-container">
+        <img src="https://raw.githubusercontent.com/Sn1pp1/karing_backup/main/karing.gif" 
+             alt="Демонстрация настройки Karing" 
+             class="demo-gif"
+             loading="lazy">
+    </div>
+    <p style="margin-top:15px;font-size:0.9rem;color:#8b949e;text-align:center">
+        💡 Если GIF не загружается — просто следуйте текстовой инструкции ниже
+    </p>
+</div>
+
+<main>
+    <div class="step">
+        <div class="step-title">Шаг 1: Принятие политики конфиденциальности</div>
+        <p>При первом запуске приложения появится окно <strong>"Your Privacy Comes First"</strong>.</p>
+        <p>• Что сделать: Нажмите синюю кнопку внизу.</p>
+        <div class="action">➡️ Нажать: <strong>Accept & Continue</strong></div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 2: Выбор языка интерфейса</div>
+        <p>В окне <strong>"Language"</strong> выберите удобный для вас язык.</p>
+        <p>• Что сделать: Выберите <strong>Русский</strong> или <strong>English</strong>.</p>
+        <div class="action">➡️ Нажать: <strong>Next</strong> (в правом верхнем углу)</div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 3: Выбор региона</div>
+        <p>В меню <strong>"Country Or Region"</strong> проверьте правильность региона.</p>
+        <p>• Что сделать: Убедитесь, что выбран ваш регион (например, RU).</p>
+        <div class="action">➡️ Нажать: <strong>Next</strong> (в правом верхнем углу)</div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 4: Настройка правил фильтрации</div>
+        <p>На экране <strong>"Preset [Custom Diversion Group]"</strong> отображаются базовые правила.</p>
+        <p>• Что сделать: Ничего не меняйте.</p>
+        <div class="action">➡️ Нажать: <strong>Next</strong> (в правом верхнем углу)</div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 5: Завершение стартовой настройки</div>
+        <p>• Что сделать: В окне "Settings" подтвердите завершение.</p>
+        <div class="action">➡️ Нажать: <strong>Done</strong> (в правом верхнем углу)</div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 6: Вход в меню синхронизации</div>
+        <p>Теперь нужно импортировать настройки из облака.</p>
+        <p>• Что сделать: В главном меню прокрутите список вниз.</p>
+        <div class="action">➡️ Нажать: <strong>Backup and Sync</strong></div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 7: Импорт конфигурации</div>
+        <p>Перейдите в раздел управления данными.</p>
+        <div class="action">
+            ➡️ Нажать: <strong>Import and Export</strong><br>
+            ➡️ Затем выбрать: <strong>Import from URL</strong>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">Шаг 8: Вставка ссылки</div>
+        <p>Скопируйте нужную ссылку из списка ниже и вставьте её в появившееся поле.</p>
+        <div class="action">➡️ Нажать: <strong>Ok</strong></div>
+        <p style="margin-top:10px;font-size:0.95rem;color:#8b949e">
+            💡 После нажатия начнётся загрузка профиля. Дождитесь появления галочки или уведомления об успехе.
+        </p>
+    </div>
+
+    <div class="activation">
+        <h3>🔑 Активация вашей подписки</h3>
+        <p><strong>Последний шаг:</strong> добавьте ваш личный доступ к VPN.</p>
+        <ol>
+            <li>Скопируйте вашу личную ссылку на подписку (которую вы получили ранее).</li>
+            <li>В приложении на главном экране нажмите <strong>Add Profile (Добавить профиль)</strong>.</li>
+            <li>Выберите:
+                <ul style="margin-top:5px;margin-left:20px">
+                    <li><strong>Import from Clipboard (Импорт из буфера обмена)</strong> — если у вас ссылка</li>
+                    <li><strong>Scan QR Code (Сканировать Qr-код)</strong> — если у вас QR-код</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="success">
+        ✅ Всё готово! Приложение настроено и готово к работе.
+    </div>
+</main>
+
+<script>
+    function toggleDownloadSection() {
+        const header = document.querySelector('.download-toggle-header');
+        const section = document.getElementById('downloadSection');
+        header.classList.toggle('expanded');
+        section.classList.toggle('expanded');
+    }
+    
+    // ✅ РАБОЧАЯ ФУНКЦИЯ КОПИРОВАНИЯ
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const elementId = this.getAttribute('data-copy');
+            const text = document.getElementById(elementId).innerText.trim();
+            const originalText = this.innerHTML;
+            
+            let copied = false;
+            
+            // Метод 1: navigator.clipboard (для HTTPS)
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => {
+                    copied = true;
+                }).catch(() => {});
+            }
+            
+            // Метод 2: document.execCommand (для HTTP)
+            if (!copied) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                try {
+                    const success = document.execCommand('copy');
+                    copied = success;
+                } catch (err) {
+                    copied = false;
+                }
+                
+                document.body.removeChild(textarea);
+            }
+            
+            // Показываем результат
+            if (copied) {
+                this.innerHTML = '✓ Copied!';
+                this.classList.add('copied');
+                this.style.background = '#6e7681';
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.classList.remove('copied');
+                    this.style.background = '';
+                }, 2000);
+            } else {
+                prompt('Нажмите Ctrl+C чтобы скопировать:', text);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
