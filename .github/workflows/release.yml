@@ -21,11 +21,16 @@ jobs:
         id: datetime
         run: echo "datetime=$(TZ='Europe/Moscow' date +'%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
 
+      - name: Delete old release tag
+        run: gh release delete latest --cleanup-tag -y || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update Latest Release Assets
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: "Auto-build #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
+          name: "🔄 Update backup files #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
           files: |
             Karing_mobile.zip
             Karing_desktop.zip
