@@ -1,0 +1,31 @@
+name: Update Latest Release
+
+on:
+  push:
+    paths:
+      - 'Karing_mobile.zip'
+      - 'Karing_desktop.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get current date and time (MSK)
+        id: datetime
+        run: echo "datetime=$(TZ='Europe/Moscow' date +'%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
+
+      - name: Update Latest Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Auto-build #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
+          files: |
+            Karing_mobile.zip
+            Karing_desktop.zip
