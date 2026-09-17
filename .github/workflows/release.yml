@@ -30,7 +30,18 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: "🔄 Update backup files #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
+          name: "Update backup files #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
+          body: |
+            ### 📦 Актуальные бэкапы конфигураций Karing
+
+            **Время сборки:** `${{ steps.datetime.outputs.datetime }} MSK`
+
+            #### 🔗 Ссылки для прямого импорта:
+            * **Mobile:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.zip`
+            * **Desktop:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_desktop.zip`
+
+            ---
+            *Архивы обновляются автоматически при отправке новых `.zip` файлов в репозиторий.*
           files: |
             Karing_mobile.zip
             Karing_desktop.zip
