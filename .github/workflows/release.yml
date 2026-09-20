@@ -3,7 +3,7 @@ name: Update Latest Release
 on:
   push:
     paths:
-      - 'karing_bak.zip'
+      - 'Karing_bak.zip'
   workflow_dispatch:
 
 permissions:
@@ -39,10 +39,10 @@ jobs:
             #### 🔗 Ссылка для прямого импорта:
 
             ```
-            https://github.com/Sn1pp1/karing_backup/raw/refs/heads/main/Karing_bak.zip
+            [https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_bak.zip](https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_bak.zip)
             ```
 
             ---
-            *Архив обновляется автоматически при отправке нового `karing_bak.zip` файла в репозиторий.*
+            *Архив обновляется автоматически при отправке нового `Karing_bak.zip` файла в репозиторий.*
           files: |
-            karing_bak.zip
+            Karing_bak.zip
