@@ -48,9 +48,12 @@
 ### 📋 Ссылки для импорта
 *Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
 
+
 ```text
 https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_bak.zip
 ```
+
+
 📂 Краткая инструкция:
 
 1. Откройте Karing → Settings → Backup and Sync (Karing → Настройки → Резервное копирование и синхронизация).
