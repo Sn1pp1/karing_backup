@@ -37,7 +37,10 @@ jobs:
             **Время сборки:** `${{ steps.datetime.outputs.datetime }} MSK`
 
             #### 🔗 Ссылка для прямого импорта:
-            * `https://github.com/Sn1pp1/karing_backup/releases/download/latest/karing_bak.zip`
+
+            ```
+            https://github.com/Sn1pp1/karing_backup/raw/refs/heads/main/Karing_bak.zip
+            ```
 
             ---
             *Архив обновляется автоматически при отправке нового `karing_bak.zip` файла в репозиторий.*
