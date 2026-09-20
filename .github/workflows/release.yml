@@ -19,7 +19,7 @@ jobs:
       - name: Get current date and time (MSK)
         id: datetime
         run: |
-          echo "datetime=$(TZ='Europe/Moscow' date '+\%Y-\%m-\%d \%H:\%M')" >> $GITHUB_OUTPUT
+          echo "datetime=$(TZ='Europe/Moscow' date '+%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
 
       - name: Delete old release tag
         run: gh release delete latest --cleanup-tag -y || true
@@ -37,7 +37,7 @@ jobs:
             **Время сборки:** `${{ steps.datetime.outputs.datetime }} MSK`
 
             #### 🔗 Ссылка для прямого импорта:
-            * **Universal:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/karing_bak.zip`
+            * `https://github.com/Sn1pp1/karing_backup/releases/download/latest/karing_bak.zip`
 
             ---
             *Архив обновляется автоматически при отправке нового `karing_bak.zip` файла в репозиторий.*
