@@ -3,8 +3,7 @@ name: Update Latest Release
 on:
   push:
     paths:
-      - 'Karing_mobile.zip'
-      - 'Karing_desktop.zip'
+      - 'karing_bak.zip'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +18,7 @@ jobs:
 
       - name: Get current date and time (MSK)
         id: datetime
-        run: echo "datetime=$(TZ='Europe/Moscow' date +'%Y-%m-%d %H:%M')" >> $GITHUB_OUTPUT
+        run: echo "datetime=$(TZ='Europe/Moscow' date +'\%Y-\%m-\%d \%H:\%M')" >> $GITHUB_OUTPUT
 
       - name: Delete old release tag
         run: gh release delete latest --cleanup-tag -y || true
@@ -32,16 +31,14 @@ jobs:
           tag_name: latest
           name: "Update backup files #${{ github.run_number }} (${{ steps.datetime.outputs.datetime }} MSK)"
           body: |
-            ### 📦 Актуальные бэкапы конфигураций Karing
+            ### 📦 Актуальный бэкап конфигурации Karing
 
             **Время сборки:** `${{ steps.datetime.outputs.datetime }} MSK`
 
-            #### 🔗 Ссылки для прямого импорта:
-            * **Mobile:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.zip`
-            * **Desktop:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_desktop.zip`
+            #### 🔗 Ссылка для прямого импорта:
+            * **Universal:** `https://github.com/Sn1pp1/karing_backup/releases/download/latest/karing_bak.zip`
 
             ---
-            *Архивы обновляются автоматически при отправке новых `.zip` файлов в репозиторий.*
+            *Архив обновляется автоматически при отправке нового `karing_bak.zip` файла в репозиторий.*
           files: |
-            Karing_mobile.zip
-            Karing_desktop.zip
+            karing_bak.zip
