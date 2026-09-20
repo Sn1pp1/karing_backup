@@ -48,13 +48,8 @@
 ### 📋 Ссылки для импорта
 *Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
 
-**📱 Mobile:**
 ```text
-https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_mobile.zip
-```
-**💻 Desktop (Windows):**
-```text
-https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_desktop.zip
+https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_bak.zip
 ```
 📂 Краткая инструкция:
 
