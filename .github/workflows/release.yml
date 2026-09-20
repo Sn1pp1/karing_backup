@@ -18,7 +18,8 @@ jobs:
 
       - name: Get current date and time (MSK)
         id: datetime
-        run: echo "datetime=$(TZ='Europe/Moscow' date +'\%Y-\%m-\%d \%H:\%M')" >> $GITHUB_OUTPUT
+        run: |
+          echo "datetime=$(TZ='Europe/Moscow' date '+\%Y-\%m-\%d \%H:\%M')" >> $GITHUB_OUTPUT
 
       - name: Delete old release tag
         run: gh release delete latest --cleanup-tag -y || true
