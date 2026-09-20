@@ -49,7 +49,7 @@
 *Нажмите на иконку копирования (справа в углу блока), чтобы получить ссылку:*
 
 ```text
-https://github.com/Sn1pp1/karing_backup/releases/download/latest/Karing_bak.zip
+https://github.com/Sn1pp1/karing_backup/raw/refs/heads/main/Karing_bak.zip
 ```
 📂 Краткая инструкция:
 
